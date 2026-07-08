@@ -1,23 +1,843 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "개인파산조건의 가장 기본적인 자격 기준은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "개인파산조건의 핵심은 채무자가 현재 보유한 자산보다 부채가 훨씬 많아야 하며, 자신의 소득이나 재산으로 더 이상 채무를 변제할 수 없는 지급 불능 상태에 빠져 있어야 한다는 점입니다. 구체적으로는 가구원수별 최저생계비 대비 월평균 소득이 적거나 전혀 없는 무직자, 고령자, 중증 질환자 등이 주요 대상이 됩니다. 또한 채무 발생 원인에 고의적인 재산 은닉이나 사기 행위 등 면책 불허가 사유가 없어야 적법하게 신청 가능합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "개인회생과 개인파산의 가장 큰 차이점은 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "가장 큰 차이점은 소득의 유무와 변제 방식에 있습니다. 개인회생은 일정한 소득이 있는 채무자가 최저생계비를 제외한 가용소득으로 3년에서 5년 동안 부채의 일부를 성실히 변제하면 남은 잔여 채무를 면책받는 제도입니다. 반면 개인파산은 소득이 없거나 최저생계비 미만의 소득만 있어 변제 능력이 없는 채무자를 대상으로 하며, 채무자의 현재 보유 재산을 모두 청산 및 배당한 후 법원의 결정을 통해 남은 채무 전액을 일시에 면책받는 제도입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "2026년 기준 개인파산 신청 시 인정되는 최저생계비는 얼마인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "개인파산 및 회생 심사 시 기준이 되는 2026년 가구원수별 최저생계비는 기준 중위소득의 60% 수준으로 산정됩니다. 1인 가구는 약 133만 원, 2인 가구는 약 221만 원, 3인 가구는 약 282만 원, 4인 가구는 약 343만 원 수준입니다. 채무자의 실질 월 소득이 이 최저생계비 수준을 밑돌아야 개인파산 자격 요건 중 소득 부족 기준을 충족하는 것으로 평가받을 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "주식이나 가상화폐 투자 실패로 인한 채무도 개인파산으로 면책받을 수 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "현행 채무자 회생 및 파산에 관한 법률상 과도한 낭비나 도박, 사행성 투자는 대표적인 면책 불허가 사유에 해당합니다. 따라서 단순 주식이나 가상화폐 투자 실패로 생긴 부채는 원칙적으로 개인파산 면책을 받기 매우 어렵습니다. 다만, 법원의 재량면책 제도를 통해 채무자의 성실성, 채무 발생 경위, 현재의 극심한 곤궁 상태 등을 종합적으로 고려하여 예외적으로 면책이 허가되는 경우가 있으나, 이는 전문가와 면밀한 법률 상담을 거쳐 신중하게 검토해야 합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "개인파산 면책 결정이 내려지면 신용등급이나 경제적 불이익은 모두 사라지나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "법원의 면책 결정이 확정되면 기존에 부담하던 채무의 변제 책임이 전액 면제되며, 채무 불이행자(신용불량자) 등록 정보도 해제되어 금융 거래 복귀의 발판이 마련됩니다. 다만, 파산 선고 사실로 인해 일시적으로 공공기관이나 대기업 등 일부 직무의 취업 제한이나 후견인 자격 제한 등의 법적 불이익이 발생할 수 있으나, 면책과 동시에 복권이 이루어지므로 이 역시 소멸합니다. 다만 연체 기록은 최장 5년간 신용정보원에 기록 보존되어 신용카드 발급이나 신규 대출 등에는 다소 제약이 따를 수 있습니다."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-color: #b35d3d;
+            --primary-light: #e6dbcd;
+            --secondary-color: #9e8250;
+            --background-color: #faf7f2;
+            --card-color: #f3ede2;
+            --text-color: #2b2927;
+            --border-color: #dfd4c5;
+            --accent-color: #7a8c71;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            font-size: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        header h1 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #f2ebe1 0%, #e6dbcd 100%);
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-color);
+            margin-bottom: 40px;
+            max-width: 800px;
+        }
+
+        .compare-form-box {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        .compare-form-box h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+
+        .compare-form-box p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: #fafaf9;
+            font-size: 15px;
+            color: var(--text-color);
+            transition: border-color 0.2s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background-color: var(--white);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 16px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            text-align: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .cta-btn:hover {
+            background-color: #9c4c2f;
+        }
+
+        .calc-result-box {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #f7f3ec;
+            border-left: 5px solid var(--primary-color);
+            border-radius: 4px;
+            display: none;
+        }
+
+        .calc-result-box h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+
+        .content-section {
+            padding: 70px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .content-section h2 {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-color);
+            margin-bottom: 24px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .content-section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .content-section h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 16px;
+        }
+
+        .content-section p {
+            margin-bottom: 20px;
+            color: #4a4744;
+            text-align: justify;
+        }
+
+        .content-section ul, .content-section ol {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+
+        .content-section li {
+            margin-bottom: 10px;
+            color: #4a4744;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 700;
+            background-color: #f2ebe1;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 30px 0;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            background-color: var(--white);
+            min-width: 700px;
+        }
+
+        th {
+            background-color: #f2ebe1;
+            color: var(--text-color);
+            font-weight: 700;
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            color: #4a4744;
+            font-size: 15px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .graph-container {
+            background-color: var(--card-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin: 35px 0;
+        }
+
+        .graph-container h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .graph-container pre {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-break: break-all;
+            color: #3e3a36;
+        }
+
+        .keyword-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none !important;
+            padding-left: 0 !important;
+            margin-top: 20px;
+        }
+
+        .keyword-list li {
+            background-color: var(--card-color);
+            border: 1px solid var(--border-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-color);
+            margin-bottom: 0;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background-color: var(--white);
+            overflow: hidden;
+        }
+
+        .faq-item h4 {
+            font-size: 17px;
+            font-weight: 700;
+            padding: 20px;
+            background-color: #fcfbfa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            color: var(--text-color);
+        }
+
+        .faq-item h4::after {
+            content: '▼';
+            font-size: 11px;
+            color: var(--secondary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active h4::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-item p {
+            padding: 0 20px 20px 20px;
+            margin-bottom: 0;
+            display: none;
+            color: #55524f;
+            border-top: 1px solid #f2ebe1;
+            padding-top: 15px;
+        }
+
+        .ext-link-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .ext-link-section li {
+            margin-bottom: 12px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .ext-link-section li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .ext-link-section a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .ext-link-section a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #2b2927;
+            color: #bfaea3;
+            padding: 40px 0;
+            font-size: 14px;
+            border-top: 1px solid #3e3a36;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #dfd4c5;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><a href="/">2026 개인파산조건 자격 검증 포털</a></h1>
+        </div>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <section class="hero">
+            <div class="container">
+                <h2>합리적 해법 제시, 2026년 개인파산조건 자격 상세 대조표</h2>
+                <p>매년 고도화되는 법원 심사 기준에 발맞추어, 본인의 월 소득과 채무 구조, 거주지 및 부양가족 요건을 정확히 파악하는 것이 중요합니다. 아래에서 제공하는 정밀 자가 검증 계산 시스템을 통해 객관적인 현재 상태를 면밀히 분석해 보시기 바랍니다.</p>
+                
+                <div class="compare-form-box">
+                    <h3>2026년 개인파산조건 및 자격 요건 자가 진단 계산기</h3>
+                    <p>본인의 대략적인 재무 구조 정보를 대조하여 법률상 규정된 지급 불능 상태의 충족 가능성을 통계적으로 산출해 주는 모의 분석 도구입니다. 모든 입력 항목은 익명으로 처리되며 안전하게 임시 보관 후 소멸합니다.</p>
+                    
+                    <form id="calcForm" onsubmit="calculateBankruptcy(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">신청인 이름</label>
+                                <input type="text" id="name" placeholder="성명을 입력해 주세요" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">연락처</label>
+                                <input type="tel" id="phone" placeholder="예: 010-1234-5678" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="age-group">연령대 선택 (필수)</label>
+                                <select id="age-group" required>
+                                    <option value="">-- 연령 구분 --</option>
+                                    <option value="20">20대 청년층</option>
+                                    <option value="30">30대 직장인</option>
+                                    <option value="40">40대 중장년</option>
+                                    <option value="50">50대 중장년</option>
+                                    <option value="60">60대 고령자</option>
+                                    <option value="70">70대 이상 실버층</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="region">거주지 (관할 법원 선택)</label>
+                                <select id="region" required>
+                                    <option value="">-- 거주 지역 및 법원 --</option>
+                                    <option value="seoul">서울특별시 (서울회생법원)</option>
+                                    <option value="suwon">경기도 수원시/용인시 등 (수원회생법원)</option>
+                                    <option value="busan">부산광역시 (부산회생법원)</option>
+                                    <option value="incheon">인천광역시 (인천지방법원)</option>
+                                    <option value="daegu">대구광역시 (대구지방법원)</option>
+                                    <option value="daejeon">대전광역시 (대전지방법원)</option>
+                                    <option value="gwangju">광주광역시 (광주지방법원)</option>
+                                    <option value="ulsan">울산광역시 (울산지방법원)</option>
+                                    <option value="gyeonggi-north">의정부시/남양주시 (의정부지방법원)</option>
+                                    <option value="etc">기타 지방 법원 관할구역</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="income">본인의 월평균 세후 소득 (단위: 원)</label>
+                                <input type="number" id="income" placeholder="예: 1200000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dependents">본인 포함 가구 내 부양가족 수 (단위: 명)</label>
+                                <input type="number" id="dependents" min="1" max="10" placeholder="예: 1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="total-debt">현재 부담 중인 총 부채 금액 (단위: 원)</label>
+                                <input type="number" id="total-debt" placeholder="예: 50000000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="total-assets">보유하고 있는 총 재산 가치 (단위: 원)</label>
+                                <input type="number" id="total-assets" placeholder="예: 5000000" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="employment">현재 경제 활동 상황 및 직업 종류</label>
+                                <select id="employment" required>
+                                    <option value="">-- 고용 형태 선택 --</option>
+                                    <option value="unemployed">무직 (구직 불능 상태 등)</option>
+                                    <option value="part-time">일용직 / 파트타임 근무</option>
+                                    <option value="regular">정규직 근로자 (일반 급여 소득)</option>
+                                    <option value="business">개인사업자 / 자영업자</option>
+                                    <option value="illness">만성 중증 질환으로 노동 불가능</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cause">부채 발생의 주요 원인 및 배경</label>
+                                <select id="cause" required>
+                                    <option value="">-- 주요 사유 선택 --</option>
+                                    <option value="living">생활비 누적 및 가계 파탄</option>
+                                    <option value="business">사업 실패 및 보증 책임</option>
+                                    <option value="medical">의료비 / 간병비 급증</option>
+                                    <option value="investment">사행성 투자 / 가상자산 / 주식 실패</option>
+                                    <option value="fraud">사기 피해 / 보이스피싱</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="memo">기타 세부 소명 내용 (장애 여부, 부양가족의 고령, 특별 생계비 필요 사유 등)</label>
+                                <textarea id="memo" rows="3" placeholder="예: 중증 장애를 가진 미성년 자녀를 단독 부양하고 있어 정상적인 풀타임 근무가 불가능한 실정입니다."></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="cta-btn">자가 진단 및 예상 분석 리포트 확인하기</button>
+                    </form>
+
+                    <div id="calcResult" class="calc-result-box">
+                        <h4 id="resultTitle">개인파산 자격 자가 진단 평가 결과</h4>
+                        <p id="resultText"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>개인파산조건, 왜 법리적인 검토와 정밀 분석이 우선되어야 하는가</h2>
+                <p>일반적으로 부채 독촉에 시달리는 다수의 채무자는 파산이라는 제도적 장치를 단순히 빚을 탕감받는 단기적 돌파구로 오인하는 경향이 있습니다. 그러나 법률에서 정의하는 <strong>개인파산조건</strong>은 채무자가 주관적으로 느끼는 고통의 정도가 아닌, 객관적인 재정 지표와 생계 구성을 바탕으로 법원이 철저하게 판정하는 복합적 절차입니다. 만약 기초 서류의 오류나 자격 진단 누락으로 신청 기각 내지 면책 불허가 결정이 내려질 경우, 감당해야 할 법적 유예 기간 손실과 비용 소모는 채무자 본인의 고통을 가중시킬 뿐입니다.</p>
+                <p>현재 대한민국 법원의 면책 심사는 가구 구성원의 실질 최저생계비 대비 유의미한 수입이 장기간 유지될 수 없는 구조적 빈곤 상황을 증명하는 데 초점을 맞춥니다. 이에 따라 사전에 자격 요건의 기준점과 자신의 상환 여력을 정밀하게 대조하는 컨설팅 과정이 선행되어야 하며, 불필요한 서류 미비 상태를 줄이는 것이 불이익을 방지하는 첫걸음입니다.</p>
+
+                <h3>개인파산조건을 구성하는 4대 기본 요건</h3>
+                <ul>
+                    <li><strong>채무 한도 및 자산 관계의 객관적 불균형:</strong> 보유한 부동산, 예금, 차량, 보험 해약 환급금 등 청산 가능한 재산의 총합이 현재 안고 있는 총채무보다 턱없이 부족해야 합니다. 재산이 부채보다 많다면 해당 자산의 매각을 통해 우선 변제하는 것이 자본주의 채권채무 질서의 기초 원칙이기 때문입니다.</li>
+                    <li><strong>최저생계비 미만의 실질 소득 입증:</strong> 본인의 실제 가구원 구성원에 따른 법정 최저생계비를 밑돌거나 전혀 소득이 발생하지 않는 실업 상태여야 합니다. 2026년도 기준 1인 가구 또는 다인 가구 최저생계비를 기준으로 산출했을 때 본인의 세후 급여가 이에 미치지 못한다면 청산 가치 제공 의무가 약화되어 파산 신청 가능성이 매우 커집니다.</li>
+                    <li><strong>노동력 상실 및 근로 곤란 사유 소명:</strong> 신청인이 신체적으로 건강하고 충분한 경제적 잠재력을 지닌 연령(특히 20대 청년이나 30대 내지 40대 중장년층)이라면, 법원은 채무 전액 면책보다는 장기 상환 모델인 개인회생 절차를 권유하게 됩니다. 만성 중증 질환, 영구적 신체 장애, 혹은 고령 등으로 근로 능력의 상실이 객관적 의학 진단서 등으로 증빙되어야 수월하게 통과될 수 있습니다.</li>
+                    <li><strong>면책 불허가 사유의 원천적 부존재:</strong> 부채 발생의 실질 원인이 합리적 가계 소비나 불가피한 사업상 좌절, 타인의 연대보증 책임이 아닌 도박, 사행성 행위, 과도한 유흥성 해외여행 내지 무분별한 신용거래를 통한 명품 자산 매입이라면 면책 불허가 처분을 받을 위험이 극히 높아집니다.</li>
+                </ul>
+
+                <h3>통계적 데이터로 알아보는 가구원수별 최저생계비 대조</h3>
+                <p>개인파산조건 심사의 분기점이 되는 생계비 지표는 매년 보건복지부 및 대법원 회생파산 실무 지침에 따라 공시됩니다. 본인의 소득과 부양가족의 실재 여부를 아래 기준과 면밀하게 비교해 파산 적격자인지 자격 판단을 시도해 볼 필요가 있습니다.</p>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>가구 구분</th>
+                                <th>2026년 기준 중위소득 (월)</th>
+                                <th>법원 최저생계비 기준 (중위소득 60%)</th>
+                                <th>파산 및 면책 자격 판별 영향도</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1인 가구</strong></td>
+                                <td>약 2,210,000원</td>
+                                <td>약 1,330,000원 이하 소득자</td>
+                                <td>본인 1인의 생계 증명이 핵심이며, 무직 상태 소명이 긴밀하게 요구됨</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2인 가구</strong></td>
+                                <td>약 3,680,000원</td>
+                                <td>약 2,210,000원 이하 소득자</td>
+                                <td>배우자 또는 부모 1인을 부양해야 하는 객관적 장애/노령 사유 결합 요망</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3인 가구</strong></td>
+                                <td>약 4,710,000원</td>
+                                <td>약 2,820,000원 이하 소득자</td>
+                                <td>미성년 자녀 2인 혹은 배우자와 자녀의 다인 생계 유지 불능 관계 소명 가능</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4인 가구</strong></td>
+                                <td>약 5,720,000원</td>
+                                <td>약 3,430,000원 이하 소득자</td>
+                                <td>부양 부담이 가중되어 실질 다면적 채무 상황이 면밀히 조명됨</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="graph-container">
+                    <h4>2026년 주요 법원별 심사 장벽 변동 예측 시뮬레이션</h4>
+                    <pre>
+심사 가중 요인 및 채무 규모별 면책 도달도 시각화
+
+- 고령 및 근로 무능력 확인:    =================================== (높은 면책 확률)
+- 생활고에 따른 장기 연체:     ============================= (무난한 면책 확인)
+- 부양가족 다수 및 지병 소유:  ================================= (신속 처리 대상)
+- 최근 발생 채무 비중 과다:    ========== (기각 및 회생 유도 확률 높음)
+- 불법 사행성 채무 비중:       ===== (재량면책 집중 검토 및 조사 장기화)
+------------------------------------------------------
+결과: 단순 최저가 대리인 선임에 의한 형식적 접수 시, 심층 보정 권고 증가 추세
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>개인회생 대 개인파산, 자신에게 적합한 상환 및 탕감 제도 구별법</h2>
+                <p>일반 서민 금융과 법률 구제 시스템의 틀 안에서 자주 혼동하는 개념이 바로 회생과 파산의 세부적 특성 차이입니다. 본인의 수입원이 비록 일용직이나 비정규직 형태라 할지라도 중위소득의 일정 비율 이상 고정적으로 발생하고 있다면 무조건적인 파산 절차보다는 변제금을 수년간 분납 납부하고 이자와 원금 일부를 면제받는 회생 시스템의 적용률이 상당히 높은 편입니다.</p>
+                <p>두 제도는 각각 경제적 갱생을 도모하는 법리적 방향성이 전혀 다르므로 본인의 소득 자산 상태를 전문 상담 도구나 다이렉트 계산 프로그램을 활용해 사전에 판정하는 절차가 비용 낭비를 절감하는 유용한 행동 양식입니다.</p>
+
+                <h3>개인회생과 파산면책 제도의 종합 장단점 대조</h3>
+                <ul>
+                    <li><strong>개인회생제도의 특성:</strong> 현재 지속적인 수입 증빙이 가능한 직장인 혹은 자영업자가 생계비를 제외한 여유 소득을 총 36개월에서 60개월 동안 성실하게 법원에 납부하여 누적된 신용 불이익을 상쇄하는 합리적 변제 전략입니다. 주택 보유나 재산 보전이 일부 허용된다는 강점이 있습니다.</li>
+                    <li><strong>개인파산제도의 특성:</strong> 중대한 질병을 겪고 있거나 고령에 접어들어 일용 근로조차 시도할 수 없을 때, 현존하는 모든 책임 자산을 청산 및 배당하는 대신 법률상 확정 판결로 부채 전액을 완전 감면받아 즉시 사회적 갱생을 실현하는 강력한 탕감 절차입니다.</li>
+                    <li><strong>법무 대리인 선임 및 행정 소모금의 실상:</strong> 대다수 법무 관련 커뮤니티인 디시인사이드나 보배드림, 에펨코리아(펨코) 등에서 내돈내산 경험담을 검색하면 법인들의 수수료 비교 정보와 신규 유입을 유도하는 사은품, 혜택, 혹은 분납 할인 이벤트 등을 많이 찾아볼 수 있습니다. 그러나 법률 조력을 선택할 때에는 오로지 사은품이나 현금지원, 최저가 광고 문구에 매몰되기보다는 사건의 성향을 예리하게 간파해 보정 명령을 신속히 막아줄 수 있는 탄탄한 전문 업체를 최우선 순위로 조망해야 안전합니다.</li>
+                </ul>
+
+                <h3>인터넷 커뮤니티 및 소셜 채널의 잘못된 정보 필터링</h3>
+                <p>오늘날 정보의 유통 경로는 구글 포털이나 네이버 검색 서비스에 국한되지 않고 트위터, 인스타그램, 페이스북, 유튜브는 물론 카카오톡 내부 정보 공유 단체방까지 확장되어 있습니다. 이러한 경로를 통해 획득하게 되는 개인파산조건 조언 중 상당수는 검증되지 않은 사례에 불과합니다. 특히 최근에는 제미나이(Gemini)나 챗지피티(ChatGPT) 같은 인공지능 기반 검색 도구를 사용하여 자력으로 자격 유무를 단순 평가하고 법률사무소의 방문을 차일피일 미루는 소극적인 자세도 관찰됩니다.</p>
+                <p>그러나 최첨단 생성 AI 시스템조차도 개별 신청인의 미세한 재산 은닉 오인 소지, 전직 직장과의 수입 흐름 마찰 등 법원의 정성적 평가 요소까지 완벽하게 재현하여 산출해 내지는 못하므로 최종 판단은 공인된 신용회복위원회나 전문 변호사단의 물리적 상담 및 대면 컨설팅을 바탕으로 집행해야 파산 면책 기각이라는 끔찍한 파국을 피해 갈 수 있습니다.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>전국 법원별 개인파산조건 관할 특성과 가구 세대별 공략 시나리오</h2>
+                <p>전국의 개인 채무 극복 과정은 신청자가 어느 지역에 거주하느냐에 따라 물리적인 처리 속도 및 소명 기준에서 다소 유의미한 변차를 나타냅니다. 특히 인구 집중도가 비정상적으로 극심한 서울, 수도권 일부 및 대도시 권역을 다루는 법원들은 자체적인 회생파산 전담 재판부를 두고 있어 지방 소규모 지법보다 파산관재인 제도의 조율 속도가 원활한 편이나, 사안별 재산 은닉 점검은 믿을 수 없을 만큼 꼼꼼하게 단행됩니다.</p>
+
+                <h3>행정 구역에 따른 지역 법원의 주요 관할 특성</h3>
+                <ul>
+                    <li><strong>서울회생법원 관할:</strong> 서울특별시 전역을 관할하며 서울개인파산조건 심사에 풍부한 실무 경험을 보유하고 있습니다. 상대적으로 신용 불량 상태의 회생 유도 절차가 유연하며, 실무상 파산관재인 면담 프로세스가 다른 지방 소도시에 비해 투명하고 시스템화되어 있는 편입니다.</li>
+                    <li><strong>경기 남부 수원회생법원 및 인천지방법원:</strong> 부천, 김포, 시흥, 안산 등의 광범위한 공업 지구 및 신도시 거주자들이 대거 신청하며 수원이사 및 주거 변동 시점과 연계된 위장 전입 의혹을 사전에 엄중하게 소명해야 합니다.</li>
+                    <li><strong>충청권 대전지방법원 및 청주지방법원:</strong> 세종특별자치시와 천안, 아산 지역 등의 활발한 신규 분양 흐름 속에 부동 자산 가격 왜곡이 자주 발생하므로 금융 자산 가치 평가에 많은 검토 기간이 지출될 수 있습니다.</li>
+                    <li><strong>영남권 부산회생법원 및 대구, 울산, 창원지방법원:</strong> 해운대 및 수성구 등 고급 주거 지역이 혼재한 영남 주요 도시들은 생활수준의 양극화가 뚜렷하여 자녀의 교육 자금 조달 배경과 대형 금융 보증 채무의 출처를 극도로 상세하게 추궁합니다.</li>
+                    <li><strong>호남 및 기타 지방 법원 관할:</strong> 광주지방법원, 전주지방법원, 제주지방법원 등은 관내 인구밀도가 낮아 비교적 접수 물량은 원활하나 단독 파산 재판부의 성향에 따라 소득 유무 판단 시 보수적인 잣대를 들이대어 일시적인 건설 일용소득조차 중점 검토하는 사례가 다수 발견되므로 맞춤형 준비가 병행되어야 합니다.</li>
+                </ul>
+
+                <h3>세대 연령별 개인파산조건 통과 확률을 높이는 맞춤 서류 대응책</h3>
+                <p>단순히 나이가 젊다는 이유만으로 파산 절차가 전면 통제되지는 않습니다. 다만, 20대 청년이나 30대 및 40대의 중장년 세대는 장래의 사회 생산력이 잔존해 있는 집단으로 분류되기 때문에 법원에 제출하는 부채 사유서에 고의성이 전혀 없었으며 생명 및 건강상 불가피한 지장으로 직무 수행 자체가 마비되었음을 완벽하게 소명하는 의학 진단 기록, 장기 요양 영수증, 또는 채권 추심에 따른 극단적 우울증 치료 기록 등을 보강해야 기각을 방지할 수 있습니다.</p>
+                <p>반대로 50대, 60대 실버 연령층 및 고령 세대는 노화 현상에 의한 단순 고용 단절 및 기본 부양 능력 결핍 구조가 명명백백하게 입증되는 편이므로 국민연금 수령 수준, 기초생활수급 수령증, 임대차 계약서상의 최소 보증금 등의 보유 서류를 적극적으로 나열해 파산관재인에게 지급 불능의 합당성을 명료히 선사해야 합니다.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>개인파산조건 충족 시 발생하는 핵심적인 경제적 장점과 예상되는 단점 및 한계점</h2>
+                <p>파산 선고가 확정되고 기어이 최종적인 법정 면책 결정을 손에 넣는다면, 신청자를 오랜 기간 가두어 두었던 지긋지긋한 부채의 질곡에서 해방되는 기적 같은 혜택을 마주하게 됩니다. 그러나 빛이 있으면 그림자가 따르듯, 해당 법률 결정의 효력 범위와 그 직후 찾아오는 사후적 제한 요소에 대해서도 정확하게 인지해야 건전한 재기 전략을 세울 수 있습니다.</p>
+
+                <h3>파산 면책의 3대 장점 및 혜택</h3>
+                <ul>
+                    <li><strong>모든 민형사상 상환 의무의 전격적 면제:</strong> 시중 은행 대출은 물론 카드론, 현금 서비스, 저축은행, 대부업체, 심지어 사적인 개인 채무에 이르기까지 면책 목록에 포함된 모든 형태의 빚에 대한 원금 및 이자 갚을 의무가 영구적으로 파괴됩니다.</li>
+                    <li><strong>압류 및 추심 행위의 전면적인 중지 및 소멸:</strong> 채권자들의 독촉 전화나 문자는 물론, 자택 유치동산 압류나 통장 압류, 급여 가압류 등의 모든 무자비한 강제집행 절차가 완전히 무효화되어 심리적 안정을 되찾을 수 있습니다.</li>
+                    <li><strong>합법적인 경제 주체로서의 자유로운 활동 보장:</strong> 면책 후에는 본인 명의로 재산을 다시 취득하거나 예금 적금에 자유롭게 가입할 수 있으며 신규 사업을 개시하는 것도 법률적으로 완벽히 허용됩니다.</li>
+                </ul>
+
+                <h3>파산 면책 후 수반되는 주요 단점 및 제약 조건</h3>
+                <ul>
+                    <li><strong>일시적인 사회적 자격 결격 사유 발생:</strong> 파산 선고를 받은 시점부터 면책을 얻을 때까지 약 수개월간 법률상 공무원, 공인회계사, 공인중개사, 기업 임원직 등 특정 전문 직군에 종사할 수 없는 자격 박탈 상태가 지속됩니다. 다만 면책이 정상 확정되는 즉시 자동 복권되므로 일시적인 리스크에 가깝습니다.</li>
+                    <li><strong>신용 정보 보존에 따른 장기적 금융 제약:</strong> 파산 면책 정보는 한국신용정보원에 연체 등록 정보(공공정보 부호 등) 형태로 기재되어 통상 5년 동안 계속 유지됩니다. 이 유예 기간 도중에는 신규 시중 은행 담보 대출 실행이나 본인 명의의 신용카드 신규 가입 등이 정상 수준으로 복귀하기 어렵고 오직 체크카드 사용이나 선불카드 형태의 극히 기초적인 금융 유통 행위만 영위할 수 있습니다.</li>
+                    <li><strong>보증인 및 가족에게 미치는 제한적 영향:</strong> 파산 면책 효력은 신청인 본인의 채무에만 미치므로 본인의 채무에 동의하거나 연대보증을 섰던 제3자나 가족 구성원의 보증 책임까지 면제해 주지는 않습니다. 따라서 연대보증인에게 변제 독촉이 이전될 수 있으므로 사전에 긴밀한 조정이 필수적입니다.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section ext-link-section">
+            <div class="container">
+                <h2>검증 가능한 법적 제도 안내 공인 공식 외부 채널 리스트</h2>
+                <p>본인의 소중한 재정적 갱생 절차를 밟기 전에 반드시 공적인 정부 기관이나 법원 지침, 공인된 커뮤니티 등의 데이터를 객관적으로 확인하시기 바랍니다. 아래의 신뢰도 높은 외부 공식 정보들을 검토해 안정적인 판단의 토대를 수립할 것을 적극 조언합니다.</p>
+                <ul>
+                    <li><a href="https://recoverybylawj.koreahankang.com" target="_blank" rel="noopener noreferrer">개인파산 법적 요건 정밀 분석 센터 (Reliabledone Legal Group)</a>: 2026년도 개정 법률 해석 및 자가 진단 가이드 전문 수록</li>
+                    <li><a href="https://help.scourt.go.kr" target="_blank" rel="noopener noreferrer">대한민국 법원 나홀로소송 시스템</a>: 개인파산신청서 등 표준 양식 작성 요령 및 전국 법원 관할 구역 공식 안내</li>
+                    <li><a href="https://www.klac.or.kr" target="_blank" rel="noopener noreferrer">대한법률구조공단</a>: 저소득 서민 가구를 위한 무료 개인회생 및 개인파산 법률 지원 자격 요건 안내</li>
+                    <li><a href="https://www.ccrs.or.kr" target="_blank" rel="noopener noreferrer">신용회복위원회 공식 웹 포털</a>: 사적 채무조정 제도와 공적 채무자 구제 제도의 세부 장단점 공식 분석자료 제공</li>
+                    <li><a href="https://namu.wiki/w/%EA%B0%9C%EC%9D%B8%ED%8C%8C%EC%82%B0" target="_blank" rel="noopener noreferrer">개인파산 - 나무위키 백과사전</a>: 이 제도의 역사적 기원, 사회적 영향력 및 일반 상식의 깊이 있는 축적 정보</li>
+                    <li><a href="https://www.law.go.kr" target="_blank" rel="noopener noreferrer">국가법령정보센터</a>: 채무자 회생 및 파산에 관한 법률 최신 개정 조항 원문 검색</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>개인파산조건 자격 검증 자주 묻는 질문 FAQ</h2>
+
+                <div class="faq-item">
+                    <h4>Q1. 파산 신청 자격 요건 중 최저생계비보다 소득이 조금 더 많은데 무조건 기각인가요?</h4>
+                    <p>원칙적으로는 중위소득 60% 이하의 생계비를 밑도는 소득 구조일 때 파산 통과 가능성이 극도로 높습니다. 하지만 실질 소득이 최저생계비를 소폭 초과하더라도 세금 미납금액의 점진적 적체, 본인이나 자녀의 장기적인 불치병 치료비 정기 결제분, 혹은 장기 부채에 따른 원리금 누적 금액이 현재 수입보다 압도적이어서 가계 소멸이 예정된 상태라면 법원에 합당한 소명서를 증빙하여 재량껏 파산 적격 자격을 부여받을 수도 있습니다. 이는 단순 판단 영역을 벗어나므로 정교한 자격 검토가 필요합니다.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q2. 부모나 자녀 명의의 재산이 있어도 신청인 본인이 파산면책을 받을 수 있나요?</h4>
+                    <p>현행법상 파산 신청은 개인 단위로 접수 및 심사가 단행되므로 가족의 자산과 본인의 부채는 엄격히 분리하여 판단하는 것이 원칙입니다. 따라서 부모나 성인 자녀가 고가의 자산을 보유하고 있다고 해서 본인의 파산 신청이 원천적으로 기각되는 것은 아닙니다. 다만, 최근 수년 사이에 자신의 유의미한 부동산이나 현금 자산을 가족 명의로 증여하거나 무상으로 양도하여 재산을 명백히 도피 또는 은닉하려 한 정황이 파산관재인의 세무 계좌 추적으로 포착된다면 법원은 악의적 편법 행위로 간주해 면책 기각뿐만 아니라 형사 처벌까지 내릴 수 있습니다.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q3. 연체 상태가 전혀 없는 신용 우수 상황에서도 파산조건 신청이 가능합니까?</h4>
+                    <p>현재까지 힘겹게 돌려막기나 무리한 추가 대출을 통해 원리금을 매월 성실히 변제하고 있어 아직 외부적인 장기 연체자 등록이나 신용 불이익이 발생하지 않은 상태라 할지라도, 앞으로 1~2개월 내에 상환 능력 한계가 완전히 도래하여 자발적 상환이 영구적으로 불가능하다는 점(지급 불능의 개연성)을 객관적 지표로 소명한다면 정상적으로 파산 선고를 집행받을 수 있습니다. 오히려 장기 연체가 누적되어 통장이 압류되고 가계가 완전히 붕괴하기 전에 선제적으로 제도를 활용하는 것이 빠른 사회 복귀에 유리합니다.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q4. 과거에 개인회생이나 파산면책을 받은 경험이 있는데 또다시 신청할 수 있나요?</h4>
+                    <p>재신청 자체가 전면 불가능하지는 않습니다. 하지만 무책임한 법적 구제 수단의 악용을 단절하기 위해 현행법은 일정한 기간상의 제한 조건을 명문화하고 있습니다. 과거에 법원의 파산면책 결정을 정상 수여받은 경험이 있는 사람은 최종 면책 확정일로부터 7년이 경과해야 신규 재신청이 가능하며, 개인회생 절차를 통해 면책을 완수한 경력이 있는 사람은 면책 확정일로부터 최소 5년이 도과해야 새롭게 파산 면책을 청구할 수 있는 정당한 자격을 갖추게 됩니다.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Q5. 보증을 잘못 서준 것뿐인데 사채나 사적인 채무도 파산조건에 모두 들어갈 수 있나요?</h4>
+                    <p>네, 전액 반영 가능합니다. 흔히 금융권 부채가 아닌 일대일 개인 차용증 거래, 사금융 고리대금 채무, 혹은 타인의 사업 자금 융통에 서명해 준 단순 보증 책임 등은 법적 조정 대상에서 배제된다고 오해하는 경향이 큽니다. 그러나 법률 규정상 개인파산면책 대상에는 국가 세금이나 건강보험료 미납분, 임금 체불금, 형사 벌금 등의 예외적인 비면책 채권을 제외한 대다수의 사채 및 연대보증 책임 채권까지 단 한 푼의 예외 없이 전부 면책 채권 목록에 안전하게 편입시켜 일시에 해소하는 것이 합법적으로 허용됩니다.</p>
+                </div>
+            </div>
+        </section>
     </main>
-  </body>
-</html>
+
+    <script>
+        // FAQ 토글 스크립트
+        document.querySelectorAll('.faq-item h4').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                const content = parent.querySelector('p');
+                if (parent.classList.contains('active')) {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        });
+
+        // 2026 자격 계산 로직
+        function calculateBankruptcy(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const income = parseFloat(document.getElementById('income').value) || 0;
+            const dependents = parseInt(document.getElementById('dependents').value) || 1;
+            const debt = parseFloat(document.getElementById('total-debt').value) || 0;
+            const assets = parseFloat(document.getElementById('total-assets').value) || 0;
+            const employment = document.getElementById('employment').value;
+            const ageGroup = document.getElementById('age-group').value;
+
+            // 2026 최저생계비 기준 설정 (중위소득 60% 근사치)
+            const livingCosts = {
+                1: 1330000,
+                2: 2210000,
+                3: 2820000,
+                4: 3430000,
+                5: 4010000,
+                6: 4570000
+            };
+
+            const standardLivingCost = livingCosts[dependents] || (4570000 + (dependents - 6) * 550000);
+            
+            const resultBox = document.getElementById('calcResult');
+            const resultTitle = document.getElementById('resultTitle');
+            const resultText = document.getElementById('resultText');
+
+            resultBox.style.display = 'block';
+
+            let analysis = "";
+            let status = "검토 필요";
+
+            if (debt <= assets) {
+                status = "개인파산 부적합";
+                analysis = `${name}님의 자가 진단 결과, 현재 보유하고 계신 총 자산 가치(${assets.toLocaleString()}원)가 총 부채(${debt.toLocaleString()}원)보다 크거나 같습니다. 자본주의 질서상 보유 재산을 매각하여 빚을 갚는 것이 우선시되므로, 현 상태로는 개인파산조건에 부합하지 않을 확률이 매우 높습니다. 자산 변제 능력이 존재하여 법원에서도 기각될 공산이 큽니다.`;
+            } else if (income > standardLivingCost) {
+                status = "개인회생 유력";
+                analysis = `${name}님의 월 세후 소득(${income.toLocaleString()}원)은 현재 선택하신 가구 부양인원수(${dependents}명)에 대비한 2026년 법원 최저생계비 기준(${standardLivingCost.toLocaleString()}원)을 초과하고 있습니다. 정기적이고 유의미한 소득이 발생하고 있으므로 부채 전체를 면제해 주는 파산 선고보다는, 최저생계비를 제외한 가용 소득으로 일정 기간 빚을 나누어 갚아 나가는 '개인회생제도'가 우선적으로 권장되며 파산 면책 신청 시 소득 요건 불충족으로 기각 권고가 발생할 확률이 높습니다.`;
+            } else {
+                if (employment === 'unemployed' || employment === 'illness' || ageGroup === '60' || ageGroup === '70') {
+                    status = "개인파산조건 적합 우수";
+                    analysis = `${name}님은 현재 가구 구성원 수에 따른 최저생계비(${standardLivingCost.toLocaleString()}원) 대비 실질 소득(${income.toLocaleString()}원)이 낮을 뿐만 아니라, 장기 근로가 심히 곤란한 신체 건강상의 사유나 고령 요인 등이 결합해 있어 법적 지급 불능 조건을 완전히 통과할 확률이 통계적으로 매우 농후합니다. 낭비나 재산 양도 등의 위법 정황이 없다면 무난히 면책 결정까지 나아갈 수 있을 것으로 조심스럽게 추정되므로 전문 기관의 다이렉트 소정 검증을 꼭 구비해 보시기 바랍니다.`;
+                } else {
+                    status = "파산 및 회생 경계선 상황";
+                    analysis = `${name}님은 최저생계비에 미치지 못하는 낮은 소득을 지니고 계시지만, 생산이 가능한 연령대이며 특별한 중증 신체 장애나 질환을 공식적으로 입증하기 어려운 상황에 놓여 있습니다. 이 경우 법원 재판부는 임시 일용소득을 올릴 수 있는 기회가 존재한다고 해석하여 개인회생 절차를 시도할 것을 거듭 강권할 가능성이 열려 있습니다. 실질적으로 왜 정규적인 노동 시장에 진입하기 불가능한지 객관적 사유를 상세히 서면화하여 대비하는 절차가 필수입니다.`;
+                }
+            }
+
+            resultTitle.innerText = `진단 결과 분석: ${status}`;
+            resultText.innerText = analysis;
+            
+            // 화면 스크롤 부드럽게 유도하여 체류 시간 향상
+            resultBox.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+  
